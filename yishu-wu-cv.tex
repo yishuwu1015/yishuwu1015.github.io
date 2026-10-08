@@ -1,0 +1,76 @@
+% Yishu Wu | concise academic CV | October 2026
+% Original single-file layout, visually informed by Clean Academic CV:
+% https://www.overleaf.com/latex/templates/clean-academic-cv-template/tjpjkzmvztwn
+% Compile with pdfLaTeX. No external files are required.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.72in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\definecolor{ink}{HTML}{202C35}
+\definecolor{muted}{HTML}{58636B}
+\definecolor{rulegray}{HTML}{B9C1C6}
+\hypersetup{colorlinks=true,urlcolor=ink,pdftitle={Yishu Wu - Academic CV},pdfauthor={Yishu Wu}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1.5em}
+\setlist[itemize]{leftmargin=14pt,itemsep=5pt,topsep=6pt,parsep=0pt}
+\titleformat{\section}{\fontsize{12}{14}\selectfont\scshape\color{ink}}{}{0pt}{}[{\color{rulegray}\titlerule[0.35pt]}]
+\titlespacing*{\section}{0pt}{15pt}{7pt}
+\newcommand{\datedline}[2]{\begin{tabularx}{\linewidth}{@{}X@{\hspace{12pt}}r@{}}#1 & {\small\color{muted}#2}\end{tabularx}}
+\newcommand{\award}[2]{\begin{tabularx}{\linewidth}{@{}l@{\hspace{10pt}}X@{}}\makebox[0.72in][l]{\small\color{muted}\strut#1} & \strut#2\end{tabularx}\par}
+
+\begin{document}
+\fontsize{11}{14.5}\selectfont
+\color{ink}
+\begin{tabularx}{\linewidth}{@{}Xr@{}}
+{\fontsize{30}{32}\selectfont Yishu Wu} & \href{mailto:yishuwu1015@gmail.com}{yishuwu1015@gmail.com}\\
+{\small\color{muted}MATHEMATICS UNDERGRADUATE} & \href{https://github.com/yishuwu1015}{github.com/yishuwu1015}
+\end{tabularx}
+\par\vspace{5pt}
+\textbf{Research interests:} Sparse attention; efficient language-model inference.\\
+{\color{muted}Seeking U.S. summer research opportunities \enspace\textbar\enspace Summer 2027}
+
+\section{Education}
+\datedline{\textbf{Central South University \& University of Dundee}}{2024--2028 (expected)}
+CSU--Dundee International College \enspace\textbar\enspace Dual-degree program\\
+Mathematics and Applied Mathematics (CSU); B.Sc. in Mathematics (Dundee)\\
+\textbf{Average: 88.96/100} \quad\textbar\quad \textbf{Rank: 10/61 in major}
+
+{\small\textbf{Selected coursework (CSU, /100):} Calculus for Science and Engineering (98), Statistics II (97), Discrete Mathematics (93).}
+
+\section{Research Experience}
+\textbf{LSSA: Learnable Sparse Semantic Attention\\for Efficient Long-Context Prefilling}\\
+\datedline{\textit{Sole author}}{Oct. 2025 -- Jun. 2026}
+{\small\color{muted}AAAI 2027 \enspace\textbar\enspace Manuscript under review (Phase 2)}
+\begin{itemize}
+\item Designed denoised supervision and learnable block selection for efficient long-context attention.
+\item Conducted literature review, method design, Python implementation, and manuscript writing.
+\item Reported \textbf{4.22$\times$ faster per-layer prefill attention} for LLaMA at 128K tokens (A100 80GB; mask prediction included), with RULER 80.19 vs. 78.13 for dense attention.
+\end{itemize}
+
+\section{Selected Honors}
+\award{2026}{\textbf{Honorable Mention}, Mathematical Contest in Modeling (MCM)}
+\award{2025}{\textbf{Meritorious Winner}, ShuWei Cup IMCM}
+\award{2024--26}{\textbf{Second-Class Academic Scholarship}, CSU (two consecutive years)}
+\award{2024--25}{\textbf{Outstanding Student}, CSU}
+
+\section{Skills and Activities}
+\textbf{Programming:} Python (basic).\\
+\textbf{English:} IELTS 7.0 overall.\\
+\textbf{Athletics:} CSU women's volleyball team member; badminton.
+
+% The quantitative example is from Tables 1 and 3 of the supplied manuscript.
+% This is per-layer prefill attention latency, not total-model inference speed.
+% Academic scholarships: 2024--2025 and 2025--2026.
+% Expected graduation: June 2028. Further research interests remain on the website.
+\end{document}
